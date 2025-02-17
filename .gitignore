@@ -3,3 +3,5 @@
 *.map
 staticfiles/
 *.pyc
+static/
+testgame/

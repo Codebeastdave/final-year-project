@@ -1,7 +1,7 @@
-*.pyo
+*.txt
 *.swp
-*.map
+*.swo
 staticfiles/
 *.pyc
-static/
-testgame/
+*.pyo
+*.swn

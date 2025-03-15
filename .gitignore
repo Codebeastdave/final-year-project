@@ -2,3 +2,5 @@ staticfiles/
 *.pyc
 *.pyo
 *.swp
+*.swo
+*.txt/

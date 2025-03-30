@@ -1,6 +1,20 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Question
+Class IndexView(generic.ListView):
+    template_name = "mywarmupapp/index.html"
+    context_object_name = "latest question list"
+    def get_queryset(self):
+        return Questions.objects.order_by(":pub_date")[:5]
+
+Class DetailView(generic.DetailView):
+    template_name ="mywarmupapp/detail.html"
+    model = Question
+
+Class ResultView(generic.DetailView):
+    template_name = "mywarmupapp/results.html"
+    model = Question
+
 def index(request):
     latest_question_list = Question.objects.order_by("-pub_date")[:5]
     context = {"latest_question_list": latest_question_list}

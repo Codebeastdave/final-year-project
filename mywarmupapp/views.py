@@ -8,7 +8,7 @@ class IndexView(generic.ListView):
     template_name = "mywarmupapp/index.html"
     context_object_name = "latest question list"
     def get_queryset(self):
-        return Questions.objects.order_by(":pub_date")[:5]
+        return Question.objects.order_by(":pub_date")[:5]
 
 class DetailView(generic.DetailView):
     template_name ="mywarmupapp/detail.html"

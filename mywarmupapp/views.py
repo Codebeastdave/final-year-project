@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import F
 from django.urls import reverse
 from django.views import generic
@@ -21,8 +21,10 @@ class ResultView(generic.DetailView):
 def vote(request, question_id):
     question = get_object_or_404(Question, pk = question_id)
     try:
+        print(50)
         selected_choice = question.choice_set.get(pk = request.POST["choice"])
     except(KeyError, Choice.DoesNotExist):
+        print(89)
         return render(request, "mywarmupapp/detail.html",{"question":question, "error": "you did'nt choose any option"},)
     else:
         selected_choice.votes = F("votes") + 1

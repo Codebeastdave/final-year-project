@@ -4,6 +4,8 @@ from django.db.models import F
 from django.urls import reverse
 from django.views import generic
 from .models import Question, Choice
+from django.utils import timezone
+
 class IndexView(generic.ListView):
     template_name = "mywarmupapp/index.html"
     context_object_name = "latest_question_list"

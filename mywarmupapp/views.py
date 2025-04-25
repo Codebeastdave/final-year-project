@@ -16,6 +16,10 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     template_name ="mywarmupapp/detail.html"
     model = Question
+    def get_queryset(self):
+        """ Return the last five published questions (not including those set to be published in the future)."""
+        return Question.objects.filter(pub_date__lte=timezone.now())
+
 
 class ResultView(generic.DetailView):
     template_name = "mywarmupapp/results.html"

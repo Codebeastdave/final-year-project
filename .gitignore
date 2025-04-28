@@ -1,0 +1,12 @@
+*.pyc
+*.pyo
+*.swp
+staticfiles/
+*.txt
+*.swp
+*.swo
+staticfiles/
+*.pyc
+*.swn
+*.txt
+db.sqlite3

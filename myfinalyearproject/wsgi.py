@@ -8,7 +8,12 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
+# add your project directory to the sys.path
+project_home = '/home/dave965/myfirstproject/my-final-year-project'
+if project_home not in sys.path:
+    sys.path.insert(0, project_home)
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myfinalyearproject.settings')

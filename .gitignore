@@ -7,3 +7,4 @@ staticfiles/
 db.sqlite
 *.pub
 mydjangokey*
+db.sqlite3

@@ -1,4 +1,7 @@
-<h1>{{ question.question_text }}</h1>
+ {% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<<h1>{{ question.question_text }}</h1>
 
 <ul>
 {% for choice in question.choice_set.all %}

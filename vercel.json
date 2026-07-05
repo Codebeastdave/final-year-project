@@ -13,7 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "my_project/wsgi.py"
+      "dest": "final-year-project/wsgi.py"
     }
   ]
 }

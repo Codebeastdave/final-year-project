@@ -25,7 +25,7 @@ print(SECRET_KEY, 98076)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True;
 
-ALLOWED_HOSTS = ['2.4', '127.0.0.1','192.168.43.90','dave965.pythonanywhere.com']
+ALLOWED_HOSTS = ['.vercel.app', '2.4', '127.0.0.1','192.168.43.90','dave965.pythonanywhere.com']
 
 
 # Application definition

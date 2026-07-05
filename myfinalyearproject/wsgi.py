@@ -15,6 +15,8 @@ import sys
 #if project_home not in sys.path:
 #    sys.path.insert(0, project_home)
 from django.core.wsgi import get_wsgi_application
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myfinalyearproject.settings')
 

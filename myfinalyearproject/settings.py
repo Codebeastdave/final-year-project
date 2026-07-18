@@ -32,7 +32,8 @@ ALLOWED_HOSTS = ['.vercel.app', '2.4', '127.0.0.1','192.168.43.90','dave965.pyth
 
 INSTALLED_APPS = [
     'mywarmupapp.apps.MywarmupappConfig',
-    'django.contrib.admin',
+    'accounts.apps.AccountsConfig',
+'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

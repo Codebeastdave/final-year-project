@@ -1,6 +1,6 @@
 from django.db import models
 
-class Post(models.Model):
+class Account_details(models.Model):
     MALE = 'M'
     FEMALE = 'F'
     GENDER_CHOICES = [
